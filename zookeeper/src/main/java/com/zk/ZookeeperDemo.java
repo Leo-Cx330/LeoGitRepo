@@ -26,11 +26,11 @@ public class ZookeeperDemo {
 			public void process(WatchedEvent event) {
 				KeeperState state = event.getState();
 				EventType type = event.getType();
-				//Èç¹û½¨Á¢Á¬½Ó
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(KeeperState.SyncConnected==state){
 					if(EventType.None==type){
 						COUNT_DOWN_LATCH.countDown();
-						System.out.println("zk ½¨Á¢Á¬½Ó");
+						System.out.println("zk ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 					}
 				}
 				
@@ -42,5 +42,8 @@ public class ZookeeperDemo {
 				Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		System.out.println("result:"+result);
 		zk.close();
+
+
+		System.out.println("result:");
 	}
 }
