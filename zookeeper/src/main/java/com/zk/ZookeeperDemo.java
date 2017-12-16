@@ -44,6 +44,6 @@ public class ZookeeperDemo {
 		zk.close();
 
 
-		System.out.println("result:");
+		 System.out.println("result:");
 	}
 }
