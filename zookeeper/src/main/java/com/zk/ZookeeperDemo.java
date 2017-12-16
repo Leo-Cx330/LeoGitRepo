@@ -41,6 +41,8 @@ public class ZookeeperDemo {
 		String result = zk.create("/hh/jj", "hello".getBytes(),
 				Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		System.out.println("result:"+result);
-		zk.close();
+		 zk.close();
+
+
 	}
 }
