@@ -42,7 +42,7 @@ public class ZookeeperDemo {
 				Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		System.out.println("result:"+result);
 		 zk.close();
-
+		System.out.println("hello");
 
 	}
 }
