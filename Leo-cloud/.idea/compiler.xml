@@ -20,6 +20,7 @@
       <module name="cloudconfig" target="1.8" />
       <module name="cloudeureka" target="1.8" />
       <module name="cloudParent" target="1.8" />
+      <module name="Leo-cloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
