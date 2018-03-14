@@ -52,8 +52,9 @@
                     <outputDirectory>build</outputDirectory>
                 </configuration>
             </plugin>
-        </plugins>
+        </plugins> 
+		
     </build>
-
+                  
 
 </project>
