@@ -1,0 +1,14 @@
+spring:
+      application:
+        name: config-Server
+      cloud:
+        config:
+          uri: https://github.com/lihao95/LeoGitRepo.git/
+          username:
+          password:
+server:
+  port: 8889
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8081/eureka
