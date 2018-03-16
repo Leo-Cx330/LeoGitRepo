@@ -15,6 +15,7 @@ import java.util.Map;
 @SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan(basePackages={"com.leo.app"})
+@RefreshScope
 public class CloudModelServer {
 
     public static  void  main(String []args){
