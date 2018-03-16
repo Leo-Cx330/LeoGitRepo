@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: cloud-model
+  cloud:
+     discovery:
+        enabled: true
+        service-id: config-server
+     profile: dev
+     label: master
+
+server:
+  port: 8003
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+
+
+
+
+

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: cloud-config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lihao95/LeoGitRepo.git/
+          searchPaths: Leo-cloud/cloud-config
+          default-label: master
+          username:
+          password:
+          force-pull: true
+server:
+  port: 8002
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:8888/eureka
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+
+
+
+
