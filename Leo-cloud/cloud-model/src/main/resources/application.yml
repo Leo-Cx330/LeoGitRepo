@@ -1,16 +1,7 @@
-spring:
-  application:
-    name: cloud-model
-  profiles:
-    active: dev
-  cloud:
-     discovery:
-        enabled: true
-        service-id: config-server
-     label: master
 
 server:
   port: 8003
+
 
 info:
   app:
