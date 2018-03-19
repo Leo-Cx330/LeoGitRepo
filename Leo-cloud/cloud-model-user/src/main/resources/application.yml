@@ -1,6 +1,12 @@
 spring:
   application:
-    name: cloud-model
+    name: cloud-model-user
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    serialization: true
 server:
   port: 8003
 
@@ -13,6 +19,7 @@ info:
 management:
   security:
     enabled: false
+
 
 
 
