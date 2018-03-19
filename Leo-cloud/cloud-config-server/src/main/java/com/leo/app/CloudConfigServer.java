@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableConfigServer
 @EnableDiscoveryClient
-@ComponentScan(basePackages = {"com.leo.app.*"})
 public class CloudConfigServer {
     public  static  void  main (String[] args){
         SpringApplication.run(CloudConfigServer.class,args);

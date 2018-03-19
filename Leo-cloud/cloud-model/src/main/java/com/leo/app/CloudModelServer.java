@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan(basePackages = {"com.leo.app.controller"})
+@ComponentScan(basePackages = {"com.leo.app"})
 public class CloudModelServer {
 
     public static  void  main(String []args){
