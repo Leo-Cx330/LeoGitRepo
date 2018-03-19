@@ -8,7 +8,7 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User,Long>{
 
 
-    //查询用户名称包含username字符串的用户对象
+        //查询用户名称包含username字符串的用户对象
     List<User> findUserByUsername(String username);
 
 }
