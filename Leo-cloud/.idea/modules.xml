@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Leo-cloud.iml" filepath="$PROJECT_DIR$/Leo-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" filepath="$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" filepath="$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-model/cloud-model.iml" filepath="$PROJECT_DIR$/cloud-model/cloud-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-model-user/cloud-model-user.iml" filepath="$PROJECT_DIR$/cloud-model-user/cloud-model-user.iml" />
     </modules>
   </component>
 </project>

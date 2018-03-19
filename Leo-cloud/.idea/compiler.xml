@@ -9,12 +9,15 @@
         <module name="cloud-config-server" />
         <module name="cloud-eureka" />
         <module name="cloud-model" />
+        <module name="cloud-model-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-config-server" target="1.8" />
+      <module name="cloud-db" target="1.8" />
       <module name="cloud-eureka" target="1.8" />
       <module name="cloud-model" target="1.8" />
+      <module name="cloud-model-user" target="1.8" />
       <module name="Leo-cloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
