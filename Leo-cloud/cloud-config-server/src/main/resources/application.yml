@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-config
+    name: config-server
   profiles:
     active: dev
   cloud:

@@ -4,7 +4,7 @@ server:
 eureka:
   server:
     enable-self-preservation: false
-    eviction-interval-timer-in-ms: 5000
+    eviction-interval-timer-in-ms: 3000
   instance:
     lease-renewal-interval-in-seconds: 5
   client:
@@ -12,7 +12,5 @@ eureka:
     fetch-registry: false
     service-url:
        defaultZone: http://localhost:8888/eureka
-management:
-  security:
-    enabled: false
+
 
