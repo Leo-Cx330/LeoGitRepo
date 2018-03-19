@@ -12,7 +12,7 @@
     <modules>
         <module>cloud-eureka</module>
         <module>cloud-config-server</module>
-        <module>cloud-model</module>
+        <module>cloud-model-user</module>
     </modules>
 
     <parent>

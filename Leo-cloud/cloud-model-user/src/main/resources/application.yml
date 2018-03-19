@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cloud-model
+server:
+  port: 8003
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+
+
+management:
+  security:
+    enabled: false
+
+
+
