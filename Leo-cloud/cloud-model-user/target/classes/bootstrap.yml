@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-model
+    name: cloud-model-user
   cloud:
     config:
       label: master
