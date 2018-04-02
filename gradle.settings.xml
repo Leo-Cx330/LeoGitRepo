@@ -1,5 +1,5 @@
 <application>
   <component name="GradleSystemSettings">
-    <option name="offlineWork" value="true" />
+    <option name="serviceDirectoryPath" value="D:/devlopment/gradle/repo" />
   </component>
 </application>
