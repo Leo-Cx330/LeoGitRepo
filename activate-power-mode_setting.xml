@@ -1,5 +1,6 @@
 <application>
   <component name="activate-power-mode">
-    <option name="MAX_CLICK_COMBO" value="33" />
+    <option name="IS_COLORFUL" value="true" />
+    <option name="MAX_CLICK_COMBO" value="53" />
   </component>
 </application>
