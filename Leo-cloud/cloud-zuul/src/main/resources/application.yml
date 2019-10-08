@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: cloud-zuul
+server:
+  port: 8004
+
+management:
+  security:
+    enabled: false
+
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+zuul:
+  ignored-services: '*'
+  thread-pool:
+    use-separate-thread-pools: true
+  routes:
+   model-user:
+       path: /leo/**
+       serviceId: cloud-model-user
+       sensitive-headers:
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+  command:
+    paas-file:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3600
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

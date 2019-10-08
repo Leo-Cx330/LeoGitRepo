@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: cloud-model-user
+  mail:
+      host: smtp.163.com
+      username: lhwyemail@163.com
+      password: lhwyemail163
+      enable:  true
+      smtp:
+        auth: true
+      starttls:
+        enable: true
+        required: true
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  port: 8003
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+
+management:
+  security:
+    enabled: false
+

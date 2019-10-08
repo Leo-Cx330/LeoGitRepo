@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: cloud-model-user
+#  cloud:
+#    config:
+#      label: dev
+#      profile: dev
+#      uri: http://118.24.109.67:8002/
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+druid:
+  type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    master:
+      url: jdbc:mysql://118.24.109.67:3306/clouddb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      initial-size: 2
+      min-idle: 1
+      max-active: 100
+      test-on-borrow: false
+    slave:
+      url: jdbc:mysql://118.24.109.67:3306/clouddbSlave?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      initial-size: 2
+      min-idle: 1
+      max-active: 100
+      test-on-borrow: false
+#mybatis
+mybatis:
+  type-aliases-package: "com.leo.app.entity"
+  mapper-locations: classpath*:/mybatis/*Mapper.xml
+
+#pagehelp分页配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params :
+     count: countSql

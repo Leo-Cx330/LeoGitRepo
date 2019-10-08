@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+<form action="/connect/weixin" method="post">
+    <button type="submit">绑定微信</button>
+</form>
+
+
+<form action="/connect/weixin" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">解绑微信</button>
+</form>
+
+
+<form action="/connect/qq" method="post">
+    <button type="submit">绑定qq</button>
+</form>
+
+
+<form action="/connect/qq" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">解绑qq</button>
+</form>
+
+<a href="/logout">退出登录</a>
+
+
+</body>
+</html>

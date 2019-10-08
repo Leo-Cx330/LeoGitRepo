@@ -1,0 +1,76 @@
+server:
+  port: 80
+spring:
+  datasource:
+    username: root
+    password: 1234567
+    url: jdbc:mysql://118.24.109.67/mydb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  session:
+    store-type: redis
+  redis:
+    timeout: 5000
+    host: 47.103.117.70
+    port: 6379
+    password: yyh-test#2019
+    database: 1
+    jedis:
+      pool:
+        # 最大可用连接数（默认为8，负数表示无限）
+        max-active: 8
+        # 最大空闲连接数（默认为8，负数表示无限）
+        max-idle: 8
+        # 最小空闲连接数（默认为0，该值只有为正数才有作用）
+        min-idle: 0
+        # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
+        max-wait: -1
+
+
+
+yyh:
+  security:
+    browser:
+       login-type: JSON
+    social:
+       filterProcessesUrl: /qqLogin
+       weixin:
+         app-id: wx1f8812a6c9f12de6   #wxd99431bbff8305a0
+         app-secret: f90f6b3612e30788247890d40b9e1492  #60f78681d063590a469f1b297feff3c4
+         providerId: weixin
+       qq:
+         app-id: 101462763
+         app-secret: 5fea4aa3675469292226bbcc118d30da
+         providerId: qq
+    app:
+       token:
+          store-type: redis
+          maximum-tokens: 1
+    oauth2:
+      clients[0]:
+        clientId: yyh_android
+        clientSecret: yyhAndroidSecret
+        accessTokenValidateSeconds: 7200
+      clients[1]:
+        clientId: yyh_ios
+        clientSecret: yyhIosSecret
+        accessTokenValidateSeconds: 7200
+      tokenStore: redis
+      jwtSigningKey: yyh
+
+
+
+
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+
+

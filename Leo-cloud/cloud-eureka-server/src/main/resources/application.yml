@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: cloud-eureka-Server
+
+---
+spring:
+  profiles: eureka1
+server:
+  port: 8001
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    hostname: eureka1
+  client:
+    register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。因为当前应用就是Eureka Server，所以需要设置成false。
+    fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true
+    service-url:
+       defaultZone: http://eureka2:8002/eureka,http://eureka3:8003/eureka,
+
+---
+spring:
+  profiles: eureka2
+server:
+  port: 8002
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    hostname: eureka2
+  client:
+    register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。因为当前应用就是Eureka Server，所以需要设置成false。
+    fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true
+    service-url:
+       defaultZone: http://eureka1:8001/eureka,http://eureka3:8003/eureka,
+
+---
+spring:
+  profiles: eureka3
+server:
+  port: 8003
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    hostname: eureka3
+  client:
+    register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。因为当前应用就是Eureka Server，所以需要设置成false。
+    fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true
+    service-url:
+       defaultZone: http://eureka1:8001/eureka,http://eureka2:8002/eureka,
+
+
+
+
+
+
+

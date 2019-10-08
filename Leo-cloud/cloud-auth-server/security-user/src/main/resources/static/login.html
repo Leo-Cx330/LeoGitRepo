@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+</head>
+<body>
+	<h2>用户名登录</h2>
+	
+	<form action="/login" method="post">
+		<table>
+			<tr>
+				<td>用户名:</td> 
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>图形验证码:</td>
+				<td>
+					<input type="text" name="validate-code">
+				    <img src="/code/img?device-id=123"/>
+					<input  type="hidden" name="device-id" value="123"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="remember-me" />记住我
+
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button type="submit" name="type" value="usernameLogin">登录</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+    <h2>手机号登录</h2>
+	<form action="/login/sms" method="post">
+		<table>
+			<tr>
+				<td>手机号:</td>
+				<td><input type="text" name="sms" value="17621060857"></td>
+			</tr>
+			<tr>
+				<td>手机验证码:</td>
+				<td>
+					<input type="text" name="validate-code">
+					<a href="/code/sms?sms=17621060857" target="">发送验证码</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button type="submit" name="type" value="mobileLogin">登录</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<h2>第三方登录</h2>
+    <a href="/qqLogin/qq">qq登录</a>
+    <a href="/qqLogin/weixin">微信登录</a>
+
+</body>
+</html>

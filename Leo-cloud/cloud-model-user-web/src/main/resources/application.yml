@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user-web
+  freemarker:
+    cache: false
+
+
+server:
+  port: 80
+
+info:
+  app:
+    name: ${spring.application.name}
+    address: ${spring.cloud.client.ipAddress}:${server.port}
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://118.24.109.67:8888/eureka
+
+
