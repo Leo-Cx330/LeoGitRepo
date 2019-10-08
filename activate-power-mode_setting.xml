@@ -1,9 +1,0 @@
-<application>
-  <component name="activate-power-mode">
-    <option name="IS_ENABLE" value="false" />
-    <option name="IS_SHAKE" value="false" />
-    <option name="IS_SPARK" value="false" />
-    <option name="MAX_CLICK_COMBO" value="6" />
-    <option name="IS_COMBO" value="false" />
-  </component>
-</application>
