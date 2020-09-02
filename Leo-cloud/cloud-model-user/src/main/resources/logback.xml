@@ -2,18 +2,18 @@
 <configuration>
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
     <!-- 控制台输出 -->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+    <appender name="STDOUT" class="ch.qos.com.leo.app.logger.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.com.leo.app.logger.logback.classic.encoder.PatternLayoutEncoder">
             <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
             <pattern>%d &lt;%c&gt; %5p [%t]: %m%n</pattern>
         </encoder>
     </appender>
 
     <appender name="FILE"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
+              class="ch.qos.com.leo.app.logger.logback.core.rolling.RollingFileAppender">
         <file>/Users/leomacpro/IdeaProjects/log/application/mpos-api-shop.log</file>
 
-        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+        <rollingPolicy class="ch.qos.com.leo.app.logger.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>/Users/leomacpro/IdeaProjects/log/application/mpos-api-shop.%i.log.zip
             </fileNamePattern>
             <minIndex>1</minIndex>
@@ -21,7 +21,7 @@
         </rollingPolicy>
 
         <triggeringPolicy
-                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                class="ch.qos.com.leo.app.logger.logback.core.rolling.SizeBasedTriggeringPolicy">
             <maxFileSize>80MB</maxFileSize>
         </triggeringPolicy>
         <encoder>
@@ -32,10 +32,10 @@
 
 
     <appender name="SERVICE"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
+              class="ch.qos.com.leo.app.logger.logback.core.rolling.RollingFileAppender">
         <file>/Users/leomacpro/IdeaProjects/log/application/mpos-api-shop-service.log</file>
 
-        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+        <rollingPolicy class="ch.qos.com.leo.app.logger.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>/Users/leomacpro/IdeaProjects/log/application/mpos-api-shop-service.%i.log.zip
             </fileNamePattern>
             <minIndex>1</minIndex>
@@ -43,7 +43,7 @@
         </rollingPolicy>
 
         <triggeringPolicy
-                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                class="ch.qos.com.leo.app.logger.logback.core.rolling.SizeBasedTriggeringPolicy">
             <maxFileSize>80MB</maxFileSize>
         </triggeringPolicy>
         <encoder>

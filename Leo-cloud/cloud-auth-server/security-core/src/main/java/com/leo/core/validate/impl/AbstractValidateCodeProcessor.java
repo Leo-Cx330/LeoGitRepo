@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.leo.core.validate.impl;
 

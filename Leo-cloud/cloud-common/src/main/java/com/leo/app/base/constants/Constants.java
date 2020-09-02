@@ -17,6 +17,9 @@ public interface Constants {
 		// 用户有效期 90天
 		Long TOKEN_USER_TIME =(long) (60*60*24*90);
 	    int COOKIE_TOKEN_USER_TIME =(60*60*24*90);
+
+	    Integer SUCCESS=0;
+	    Integer FAIL=-1;
 			
 				
 }

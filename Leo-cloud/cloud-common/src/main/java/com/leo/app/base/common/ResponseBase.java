@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ResponseBase {
 
-	private Integer rtnCode;
+	private Integer code;
 	private String msg;
 	private Object data;
 
@@ -13,15 +13,15 @@ public class ResponseBase {
 
 	}
 
-	public ResponseBase(Integer rtnCode, String msg, Object data) {
+	public ResponseBase(Integer code, String msg, Object data) {
 		super();
-		this.rtnCode = rtnCode;
+		this.code = code;
 		this.msg = msg;
 		this.data = data;
 	}
-	public ResponseBase(Integer rtnCode,String msg) {
+	public ResponseBase(Integer code,String msg) {
 		super();
-		this.rtnCode = rtnCode;
+		this.code = code;
 		this.msg = msg;
 		this.data =data;
 	}
@@ -35,7 +35,7 @@ public class ResponseBase {
 
 	@Override
 	public String toString() {
-		return "ResponseBase [rtnCode=" + rtnCode + ", msg=" + msg + ", data=" + data + "]";
+		return "ResponseBase [code=" + code + ", msg=" + msg + ", data=" + data + "]";
 	}
 
 }
