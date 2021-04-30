@@ -22,6 +22,7 @@
         <module>cloud-gateway</module>
         <module>cloud-es</module>
         <module>cloud-spring-starter</module>
+        <module>cloud-netty</module>
         <!--<module>cloud-framework</module>-->
     </modules>
 

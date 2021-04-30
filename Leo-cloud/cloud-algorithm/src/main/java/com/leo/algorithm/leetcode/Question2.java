@@ -1,7 +1,5 @@
 package com.leo.algorithm.leetcode;
 
-import lombok.val;
-
 /**
  * Copyright xxxx
  * FileName: leo-cloud
@@ -28,26 +26,32 @@ public class Question2 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-
-        ListNode node1 = l1;
-        ListNode node2 = l2;
-        ListNode node = new ListNode(0);
-        ListNode root = node;
-        int carry = 0;
-        while (node1 != null || node2 != null || carry!=0) {
-            int v1 = node1.val;
-            int v2 = node2.val;
-            int sum = (v1 + v2) + carry;
-            int newVal = sum % 10;
+        int x,y;
+        ListNode q=l1;
+        ListNode p=l2;
+        ListNode head=new ListNode(0);
+        ListNode cur=head;
+        int carry=0;
+        while(q!=null ||p!=null){
+            x=q!=null?q.val:0;
+            y=p!=null?p.val:0;
+            int sum=x+y+carry;
             carry=sum/10;
-            ListNode nextNode = new ListNode(newVal);
-            root.next =nextNode;
-            root=nextNode;
-            node1=node1.next;
-            node2=node2.next;
+            cur.next=new ListNode(sum%10);
+            cur=cur.next;
+            if(q!=null) {
+                q=q.next;
+            }
+            if(p!=null) {
+                p=p.next;
+            }
 
         }
-        return root;
+        if(carry>0){
+            cur.next=new ListNode(carry);
+        }
+
+        return head.next;
     }
 
     public static void main(String[] args) {

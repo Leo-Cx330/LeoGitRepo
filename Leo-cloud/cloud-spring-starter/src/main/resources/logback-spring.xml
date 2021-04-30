@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <include resource="log-define.xml"/>
+
+    <!-- 日志输出级别 -->
+    <root level="INFO">
+        <appender-ref ref="BASE-FILE-ERROR"/>
+        <appender-ref ref="ASYNC-API"/>
+        <appender-ref ref="BASE-FILE-INFO"/>
+    </root>
+
+
+</configuration>

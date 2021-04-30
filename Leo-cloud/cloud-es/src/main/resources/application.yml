@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cloud-es
+  elasticsearch:
+    rest:
+      uris: http://127.0.0.1:9300
+      username: elastic
+      password: admin123
+server:
+  port: 9100
+
+
