@@ -1,5 +1,8 @@
 package com.leo.algorithm.leetcode;
 
+import java.util.LinkedList;
+import java.util.Stack;
+
 /**
  * Copyright xxxx
  * FileName: leo-cloud
@@ -50,7 +53,6 @@ public class Question2 {
         if(carry>0){
             cur.next=new ListNode(carry);
         }
-
         return head.next;
     }
 
